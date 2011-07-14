@@ -1,0 +1,3 @@
+= paginate @blogs
+%ul{:class=> (['pagination_frame', pagination_css_class].compact.join(' ')) }
+  =render :partial => 'blog', :collection => @blogs
