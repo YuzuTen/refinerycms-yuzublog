@@ -2,14 +2,14 @@
 # Encoding: UTF-8
 require 'pathname'
 require 'bundler'
-Bundler.require (:gemspec_builder) if defined?(Bundler)
+#Bundler.require (:gemspec_builder) if defined?(Bundler)
 
 module Refinery
   Version='1.1.0'
 end
 
 gempath = Pathname.new(File.expand_path('../../', __FILE__))
-require gempath.join('lib', 'refinerycms-yuzublog')
+require gempath.join('lib', 'refinerycms-yuzublog', 'version')
 
 
 files = %w( Gemfile *.md **/**/{*,.rspec,.gitignore,.yardopts} ).map { |file| Pathname.glob(file) }.flatten

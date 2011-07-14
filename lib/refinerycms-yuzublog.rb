@@ -1,4 +1,4 @@
-require 'refinerycms-core'
+require 'refinerycms-base'
 
 module Refinery
   module Yuzublog

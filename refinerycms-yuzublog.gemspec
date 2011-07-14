@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-yuzublog}
   s.version           = %q{0.0.1}
   s.description       = %q{Refinery integration for YuzuTen's Yuzublog project'}
-  s.date              = %q{2011-07-12}
+  s.date              = %q{2011-07-14}
   s.summary           = %q{A multisite-savvy blogging engine that works with RefineryCMS}
   s.email             = %q{jason@yuzuten.com}
   s.homepage          = %q{http://www.yuzuten.com}
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency    'refinerycms-pages',          '= 1.1.0'
   s.add_dependency    'refinerycms-resources',      '= 1.1.0'
   s.add_dependency    'refinerycms-settings',       '= 1.1.0'
+  s.add_dependency    'rails', '>= 3.1.0rc4'
   #s.add_dependency    'yuzublog'
   s.files             = [
     '.gitignore',
@@ -44,6 +45,11 @@ Gem::Specification.new do |s|
     'app/assets/stylesheets/application.css',
     'app/controllers',
     'app/controllers/application_controller.rb',
+    'app/controllers/refinery',
+    'app/controllers/refinery/yuzublog/admin',
+    'app/controllers/refinery/yuzublog/admin/blogs_controller.rb',
+    'app/controllers/refinery/yuzublog/admin/comments_controller.rb',
+    'app/controllers/refinery/yuzublog/admin/posts_controller.rb',
     'app/helpers',
     'app/helpers/application_helper.rb',
     'app/mailers',
@@ -51,6 +57,17 @@ Gem::Specification.new do |s|
     'app/views',
     'app/views/layouts',
     'app/views/layouts/application.html.erb',
+    'app/views/refinery',
+    'app/views/refinery/yuzublog/admin',
+    'app/views/refinery/yuzublog/admin/blogs',
+    'app/views/refinery/yuzublog/admin/blogs/_actions.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/_blog.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/_blogs.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/_form.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/_records.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/edit.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/index.html.haml',
+    'app/views/refinery/yuzublog/admin/blogs/new.html.haml',
     'config',
     'config/environments',
     'config/environments/development.rb',
@@ -69,7 +86,6 @@ Gem::Specification.new do |s|
     'public/422.html',
     'public/500.html',
     'public/favicon.ico',
-    'public/index.html',
     'public/robots.txt',
     'refinerycms-yuzublog.gemspec',
     'test',
