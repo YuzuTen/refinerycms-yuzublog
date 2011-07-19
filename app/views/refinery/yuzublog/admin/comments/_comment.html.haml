@@ -1,0 +1,10 @@
+%li{:class=> "clearfix record #{cycle('on', 'on-hover')}"}
+  %span.title=post.title
+  %span.preview
+  %span.actions
+    =link_to refinery_icon_tag('application_edit.png'), main_app.edit_refinery_admin_post_path(post),
+      :title=> t('edit', :scope=>'refinery.yuzublog.admin.posts')
+    =link_to refinery_icon_tag('delete.png'), main_app.refinery_admin_post_path(post),
+      :class=> 'cancel confirm-delete', :title=> t('delete', :scope=>'refinery.yuzublog.admin.posts'),
+      :confirm => t('message', :scope => 'refinery.yuzublog.admin.posts.delete'),
+      :method => :delete

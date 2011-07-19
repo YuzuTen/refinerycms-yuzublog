@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-yuzublog}
   s.version           = %q{0.0.1}
   s.description       = %q{Refinery integration for YuzuTen's Yuzublog project'}
-  s.date              = %q{2011-07-14}
+  s.date              = %q{2011-07-19}
   s.summary           = %q{A multisite-savvy blogging engine that works with RefineryCMS}
   s.email             = %q{jason@yuzuten.com}
   s.homepage          = %q{http://www.yuzuten.com}
@@ -22,17 +22,12 @@ Gem::Specification.new do |s|
   s.add_dependency    'refinerycms-base',           '= 1.1.0'
   s.add_dependency    'refinerycms-core',           '= 1.1.0'
   s.add_dependency    'refinerycms-dashboard',      '= 1.1.0'
-  s.add_dependency    'refinerycms-images',         '= 1.1.0'
-  s.add_dependency    'refinerycms-pages',          '= 1.1.0'
-  s.add_dependency    'refinerycms-resources',      '= 1.1.0'
   s.add_dependency    'refinerycms-settings',       '= 1.1.0'
+
   s.add_dependency    'rails', '>= 3.1.0rc4'
   #s.add_dependency    'yuzublog'
   s.files             = [
     '.gitignore',
-    'Gemfile',
-    'Gemfile',
-    'Gemfile.lock',
     'README',
     'Rakefile',
     'app',
@@ -68,6 +63,15 @@ Gem::Specification.new do |s|
     'app/views/refinery/yuzublog/admin/blogs/edit.html.haml',
     'app/views/refinery/yuzublog/admin/blogs/index.html.haml',
     'app/views/refinery/yuzublog/admin/blogs/new.html.haml',
+    'app/views/refinery/yuzublog/admin/comments',
+    'app/views/refinery/yuzublog/admin/comments/_actions.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/_comment.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/_form.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/_posts.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/_records.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/edit.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/index.html.haml',
+    'app/views/refinery/yuzublog/admin/comments/new.html.haml',
     'config',
     'config/environments',
     'config/environments/development.rb',

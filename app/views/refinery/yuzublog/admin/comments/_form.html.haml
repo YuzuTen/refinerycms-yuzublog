@@ -1,0 +1,13 @@
+= form_for [:admin, @comment.post, @comment], :url => (@comment.persisted? ? main_app.refinery_admin_comment_path(@comment) : main_app.refinery_admin_post_comment_path(@comment.post, @comment)) do |f|
+  - render :partial => "/refinery/admin/error_messages", |
+    :locals => { :object => @post, :include_object_name => true }
+
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title
+  .field
+    = f.label :story
+    = f.text_area :story, :class=> 'wymeditor widest'
+  .actions
+    = f.submit
