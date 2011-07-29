@@ -5,8 +5,26 @@ en:
   refinery:
     plugins:
       refinery_yuzublog:
-        title: Blog Administration
+        title: Blogs
     yuzublog:
       admin:
         blogs:
+          actions:
+            new: Add new blog
           edit: Edit this blog
+          new: New blog
+          delete: Remove this blog forever
+        posts:
+          records:
+            empty_set: No posts for this blog.
+            create_first: Write the first entry.
+          form:
+            draft_status: Save as draft
+            published_status: Publish
+          actions:
+            new: Add new blog post
+          edit: Edit this post
+          new: New blog post
+          delete: Remove this post forever
+
+

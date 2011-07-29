@@ -1,15 +1,18 @@
-= form_for [:admin, @blog], :url => @blog.persisted? ? main_app.refinery_admin_blog_path(@blog) : main_app.refinery_admin_blogs_path do |f|
+= form_for [main_app, :refinery_admin, @blog] do |f|
   - render :partial => "/refinery/admin/error_messages", |
     :locals => { :object => @blog, :include_object_name => true }
 
+  %ul
+    - @blog.errors.full_messages.each do |msg|
+      %li= msg
   .field
     = f.label :name
     %br
     = f.text_field :name
   .field
-    = f.label :slug
+    = f.label :subheading
     %br
-    = f.text_field :slug
+    = f.text_field :subheading
   .field
     = f.label :description
     = f.text_area :description, :class=> 'wymeditor widest'
@@ -18,4 +21,4 @@
     %br
     = f.collection_select :author_ids, @users, :id, :email, {}, :multiple => true
   .actions
-    = f.submit
+    = f.submit :class=>"wymupdate button"
