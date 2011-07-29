@@ -1,0 +1,12 @@
+#records
+  =render :partial => 'records'
+#actions
+  =render :partial => 'actions'
+
+- content_for :javascripts do
+  :javascript
+    $(document).ready(function() {
+      $('#records ul li .actions a[href*=edit]').each(function(i, li) {
+        $(li).attr('name', $(li).attr('tooltip'));
+      });
+    });

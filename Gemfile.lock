@@ -5,6 +5,33 @@ GIT
     refinerycms-generators (1.1.0)
 
 GIT
+  remote: git://github.com/resolve/refinerycms-generators.git
+  revision: bce03cb610916f20eaca7b66899045a58f96d00a
+  specs:
+    refinerycms-generators (1.1.0)
+
+GIT
+  remote: git://github.com/resolve/refinerycms.git
+  revision: bdba8cb108cfab33b960d3c60f797ee3f53bd7d7
+  specs:
+    refinerycms-base (1.1.0)
+    refinerycms-core (1.1.0)
+      acts_as_indexed (~> 0.7)
+      awesome_nested_set (~> 2.0)
+      friendly_id_globalize3 (~> 3.2.1)
+      globalize3 (~> 0.1)
+      kaminari (~> 0.12)
+      rails (>= 3.1.0.rc4)
+      refinerycms-base (= 1.1.0)
+      refinerycms-generators (~> 1.1)
+      refinerycms-settings (= 1.1.0)
+      truncate_html (~> 0.5)
+    refinerycms-dashboard (1.1.0)
+      refinerycms-core (= 1.1.0)
+    refinerycms-settings (1.1.0)
+      refinerycms-base (= 1.1.0)
+
+GIT
   remote: git://github.com/resolve/refinerycms.git
   revision: bdba8cb108cfab33b960d3c60f797ee3f53bd7d7
   specs:
