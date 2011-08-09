@@ -1,13 +1,22 @@
-= form_for [:admin, @comment.post, @comment], :url => (@comment.persisted? ? main_app.refinery_admin_comment_path(@comment) : main_app.refinery_admin_post_comment_path(@comment.post, @comment)) do |f|
+= form_for [:admin, @comment], :url => (@comment.persisted? ? main_app.refinery_admin_comment_path(@comment) : main_app.refinery_admin_post_comment_path(@comment.post, @comment)) do |f|
   - render :partial => "/refinery/admin/error_messages", |
-    :locals => { :object => @post, :include_object_name => true }
+    :locals => { :object => @comment, :include_object_name => true }
 
   .field
     = f.label :title
     %br
     = f.text_field :title
   .field
-    = f.label :story
-    = f.text_area :story, :class=> 'wymeditor widest'
+    = f.label :comment
+    = f.text_area :comment, :class=> 'wymeditor widest'
+  .field
+    = f.label :status
+    = @comment.aasm_state.humanize
+    = f.label :state, t(".comment_approval")
+    = radio_button_tag(:status, :no_action, :default=>true)
+    = label_tag(:status_no_action,t(".no_action"), :style=>'display: inline')
+    - @comment.aasm_events_for_current_state.each do |state|
+      = radio_button_tag(:status,state)
+      = label_tag("status_#{state}",t(".#{state}"), :style=>'display: inline' )
   .actions
     = f.submit

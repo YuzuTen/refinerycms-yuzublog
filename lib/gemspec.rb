@@ -60,12 +60,12 @@ Gem::Specification.new do |s|
   s.add_dependency    'bundler',                    '~> 1.0'
 
   # Refinery CMS
-  s.add_dependency    'refinerycms-base',           '= #{::Refinery::Version}'
-  s.add_dependency    'refinerycms-core',           '= #{::Refinery::Version}'
-  s.add_dependency    'refinerycms-dashboard',      '= #{::Refinery::Version}'
-  s.add_dependency    'refinerycms-settings',       '= #{::Refinery::Version}'
+  #s.add_dependency    'refinerycms-base',           '= #{::Refinery::Version}'
+  #s.add_dependency    'refinerycms-core',           '= #{::Refinery::Version}'
+  #s.add_dependency    'refinerycms-dashboard',      '= #{::Refinery::Version}'
+  #s.add_dependency    'refinerycms-settings',       '= #{::Refinery::Version}'
 
-  s.add_dependency    'rails', '>= 3.1.0rc4'
+  #s.add_dependency    'rails', '>= 3.1.0rc5'
   #s.add_dependency    'yuzublog'
   s.files             = [
     '#{files.sort.join("',\n    '")}'

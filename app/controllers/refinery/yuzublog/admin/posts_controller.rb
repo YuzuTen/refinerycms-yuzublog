@@ -5,7 +5,6 @@ module Refinery
         crudify :'post',
           :order => 'created_at DESC',
           :xhr_paging => true
-        alias_method :crudify_create, :create
 
         before_filter :set_active_user, :only=>[:create, :update]
 
@@ -58,7 +57,7 @@ module Refinery
               else
                 render :partial => "/refinery/admin/error_messages",
                        :locals => {
-                         :object => @Post,
+                         :object => @post,
                          :include_object_name => true
                        }
               end

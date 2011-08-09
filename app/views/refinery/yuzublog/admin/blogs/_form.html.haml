@@ -5,6 +5,13 @@
   %ul
     - @blog.errors.full_messages.each do |msg|
       %li= msg
+
+  .field
+    = f.label :site
+    - if @autoassigned_site || @blog.persisted?
+      = @blog.site.name
+    - else
+      = f.collection_select :site_id, @sites, :id, :name, {}
   .field
     = f.label :name
     %br

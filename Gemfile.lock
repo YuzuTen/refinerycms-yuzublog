@@ -26,8 +26,6 @@ GIT
       refinerycms-generators (~> 1.1)
       refinerycms-settings (= 1.1.0)
       truncate_html (~> 0.5)
-    refinerycms-dashboard (1.1.0)
-      refinerycms-core (= 1.1.0)
     refinerycms-settings (1.1.0)
       refinerycms-base (= 1.1.0)
 
@@ -47,8 +45,6 @@ GIT
       refinerycms-generators (~> 1.1)
       refinerycms-settings (= 1.1.0)
       truncate_html (~> 0.5)
-    refinerycms-dashboard (1.1.0)
-      refinerycms-core (= 1.1.0)
     refinerycms-settings (1.1.0)
       refinerycms-base (= 1.1.0)
 
@@ -58,10 +54,6 @@ PATH
     refinerycms-yuzublog (0.0.1)
       bundler (~> 1.0)
       rails (>= 3.1.0rc4)
-      refinerycms-base (= 1.1.0)
-      refinerycms-core (= 1.1.0)
-      refinerycms-dashboard (= 1.1.0)
-      refinerycms-settings (= 1.1.0)
 
 GEM
   remote: http://rubygems.org/

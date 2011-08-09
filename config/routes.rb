@@ -6,6 +6,7 @@
           get 'drafts'
         end
       end
+      resources :comments, :shallow=>true
     end
     resources :posts, :except=> [:show, :new]
     resources :comments, :except => :show

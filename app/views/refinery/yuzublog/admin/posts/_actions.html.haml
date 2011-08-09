@@ -1,4 +1,5 @@
 %ul
   %li= render :partial => "/refinery/admin/search", :locals => { :url => main_app.refinery_admin_posts_path }
   %li
+    =link_to(t('list_blogs', :scope=>'refinery.yuzublog.admin.all'), main_app.refinery_admin_blogs_path(), {:class => "back_icon"})
     =link_to(t('.new'), main_app.new_refinery_admin_blog_post_path(@blog), {:class => "add_icon"})

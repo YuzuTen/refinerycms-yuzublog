@@ -8,6 +8,8 @@ en:
         title: Blogs
     yuzublog:
       admin:
+        all:
+          list_blogs: List blogs
         blogs:
           actions:
             new: Add new blog
@@ -26,5 +28,21 @@ en:
           edit: Edit this post
           new: New blog post
           delete: Remove this post forever
-
-
+        comments:
+          edit:
+            editing_comment: Editing Comment
+          form:
+            comment_approval: Comment moderation
+            no_action: No action
+            approved: Approved
+            approve: Approve
+            probable_spam: Probable Spam
+            spam: Spam
+            reject: Reject
+            rejected: Rejected
+          actions:
+            new: Add a new comment
+            blogs: List blogs
+          records:
+            empty_set: No comments.
+            create_first: Encourage discussion.
