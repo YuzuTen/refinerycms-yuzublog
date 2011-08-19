@@ -11,4 +11,6 @@
     resources :posts, :except=> [:show, :new]
     resources :comments, :except => :show
   end
+
+
 end

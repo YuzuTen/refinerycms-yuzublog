@@ -27,7 +27,7 @@ module Refinery
         def new
           @blog=Blog.find(params['blog_id'])
           @post=@blog.posts.new(:active_user=>current_user)
-          logger.info("Post: #{@post}")
+          3.times { @post.post_images.build }
         end
 
         def create

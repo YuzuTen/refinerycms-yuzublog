@@ -11,6 +11,9 @@ en:
         all:
           list_blogs: List blogs
         blogs:
+          records:
+            empty_set: No blogs yet.
+            create_first: Create a new blog for this site.
           actions:
             new: Add new blog
           edit: Edit this blog

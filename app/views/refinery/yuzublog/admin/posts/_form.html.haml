@@ -1,4 +1,4 @@
-= form_for [main_app, :refinery_admin, @blog,@post] do |f|
+= form_for [main_app, :refinery_admin, @blog,@post], :html => {:multipart => true}  do |f|
   - render :partial => "/refinery/admin/error_messages", |
     :locals => { :object => @post, :include_object_name => true }
 
@@ -15,22 +15,23 @@
     %br
     = f.text_field :category_list
     .categories.help Separate each item with a comma.
+    .image_upload
+    =@post.post_images.length
+    =f.fields_for :post_images do |builder|
+      - if builder.object.new_record?
+        .fileupload.field
+          =builder.label :caption, "Image Caption"
+          =builder.text_field :caption
+          =builder.label :photo, "File"
+          =builder.file_field :photo
+      - else
+        .uploaded_image.field
+          = builder.hidden_field :retained_photo
+          = builder.label :remove_photo, :style=>"display: inline"
+          = builder.check_box :remove_photo
+          = image_tag builder.object.photo.thumb('100x100').url if builder.object.photo_uid
 
-  -#<%=f.fields_for :post_images do |builder| %>
-  -#<%unless builder.object.nil?  %>
-  -#  <%if builder.object.new_record?%>
-  -#    <div class="fileupload field">
-  -#      <%=builder.label :caption, "Image Caption" %>
-  -#      <%=builder.text_field :caption %>
-  -#      <%=builder.label :photo, "File" %>
-  -#      <%=builder.file_field :photo %>
-  -#    </div>
-  -#  <%else%>
-  -#  <a href="<%=builder.object.photo.url%>"><%=image_tag builder.object.photo.url(:thumb), :title=>builder.object.caption%></a>
-  -#
-  -#  <% end %>
-  -#  <% end %>
-  -#<% end %>
+
   .field
     = f.radio_button "publish_status", 'draft'
     = f.label :publish_status, t('.draft_status'), :value=>'draft'
